@@ -7,10 +7,10 @@ Sys.setenv(PROJECT_ID=Sys.getenv('DSX_PROJECT_ID'))
 Sys.setenv(PROJECT_ACCESS_TOKEN=Sys.getenv('DSX_TOKEN'))
 #Sys.setenv(RUNTIME_ENV_APSX_URL='https://internal-nginx-svc:12443')
 #url <- "https://internal-nginx-svc:12443"
-Sys.setenv(RUNTIME_ENV_APSX_URL=url)
+Sys.setenv(RUNTIME_ENV_APSX_URL=args[1])
 #cert <- "/etc/certificate/certificate.pem"
 #httr::set_config(httr::config(cainfo = "/etc/certificate/certificate.pem"))
-httr::set_config(httr::config(cainfo = cert))
+httr::set_config(httr::config(cainfo = args[2]))
 
 
 project <- access_project()
