@@ -1,3 +1,5 @@
+args = commandArgs(trailingOnly=TRUE)
+
 library("pmml")
 
 library(nnet)
@@ -8,7 +10,6 @@ Sys.setenv(PROJECT_ACCESS_TOKEN=Sys.getenv('DSX_TOKEN'))
 #Sys.setenv(RUNTIME_ENV_APSX_URL='https://internal-nginx-svc:12443')
 #url <- "https://internal-nginx-svc:12443"
 
-args = commandArgs(trailingOnly=TRUE)
 
 Sys.setenv(RUNTIME_ENV_APSX_URL=args[1])
 #cert <- "/etc/certificate/certificate.pem"
