@@ -22,3 +22,7 @@ final_predictions <- predict(load_model, ird[1:5,])
 pmmlmodel <- pmml(ir.nn2)
 
 saveXML(pmmlmodel,file = "assets/rstudio/IrisNet.xml")
+
+# use the following for online test
+
+# {"input_data":[{"fields":["Sepal.L.","Sepal.W.","Petal.L.","Petal.W."],"values":[[5.1,3.5,1.4,0.2]]}]}
